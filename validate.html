@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validate</title>
+    <style>
+        .design{
+            padding: 10px;
+
+        }
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>This is the validation form</h2>
+    <form action="/myaction.php" name="myform" onsubmit="return validateform()" method="post">
+        <div class="design" id="name">
+            Name: <input type="text" name="fname" required><b><span class="ferror"></span></b>
+
+        </div>
+        <div class="design" id="femail">
+            Email: <input type="email" name="femail" ><b><span class="ferror"></span></b>
+            
+        </div>
+        <div class="design" id="fphone">
+            Phone: <input type="number" name="fphone"required><b><span class="ferror"></span></b>
+            
+        </div>
+        <div class="design" id="fpassword">
+            Password: <input type="password" name="fpassword" required><b><span class="ferror"></span></b>
+            
+        </div>
+        <input class="button" type="submit" value="submit">
+    </form>
+</body>
+<script>
+    function seterror(id,error){
+         element=document.getElementById(id);
+         element.getElementsByClassName('ferror')[0].innerHTML=error;
+    }
+    function validateform(){
+       var returnval=true;
+       var name=document.forms['myform']["fname"].value;
+       if(name.length<5){
+        seterror("name", "Length of name is short");
+        returnval=false;
+       }
+       var email=document.forms['myform']["femail"].value;
+       if(email.length>15){
+        seterror("femail", "Length of email is large");
+        returnval=false;
+       }
+       var phone=document.forms['myform']["fphone"].value;
+       if(phone.length!=10){
+        seterror("fphone", "phone number should of length 10");
+        returnval=false;
+       }
+       var password=document.forms['myform']["fpassword"].value;
+       if(password.length<6){
+        seterror("fpassword", "password is too weak");
+        returnval=false;
+       }
+       return returnval
+    }
+</script>
+</html>

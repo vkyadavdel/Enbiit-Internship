@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>contact-form</title>
+</head>
+<body>
+    <h2>Contact Form</h2>
+    <div class="contact">
+    <form action="backend.php">
+        <div class="input-group">
+            <input type="text" name="name" id="name" placeholder="enter your name">
+            <label for="name">Name:</label>
+        </div>
+
+        <div class="input-group">
+            <input type="number" name="phone no." id="phone no." placeholder="enter your number">
+            <label for="number">Phone:</label>
+        </div>
+
+        <div class="input-group">
+            <input type="email" name="email id" id="email id" placeholder="enter your email">
+            <label for="email id">Email:</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" name="address" id="address" placeholder="enter your address">
+            <label for="address">Address:</label>
+        </div>
+
+        <div class="input-group">
+            <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+            <label for="msg">Message:</label>
+        </div>
+
+        <div class="input-group">
+            <button type="submit">submit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

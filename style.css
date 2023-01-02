@@ -1,0 +1,86 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.navbar{
+    background-color: black;
+}
+.navbar ul{
+    overflow: auto;
+}
+.navbar li{
+    float: left;
+    list-style: none;
+    margin: 10px;
+}
+.navbar li a{
+    padding: 3px 3px;
+    text-decoration: none;
+    color:white;
+}
+.navbar li a:hover{
+    color:black;
+    background-color: white;
+}
+.search{
+    float: right;
+    padding: 12px 70px;
+    padding: 8px;
+}
+.search input{
+    padding: 5px;
+}
+.icon-search{
+    color: white;
+}
+.main{
+    width: 60%;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('https://cdn.pixabay.com/photo/2017/01/12/21/42/tiger-1975790_960_720.jpg');
+    background-size: 100% 100%;
+    animation: slider 10s infinite linear;
+}
+@keyframes slider {
+    0%{
+        background-image: url('https://cdn.pixabay.com/photo/2017/01/12/21/42/tiger-1975790_960_720.jpg');
+    }
+    25%{
+        background-image: url('https://cdn.pixabay.com/photo/2015/01/07/11/31/tigers-591359_960_720.jpg');
+    }
+    50%{
+        background-image: url('https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753_960_720.jpg');
+    }
+    75%{
+        background-image: url('https://cdn.pixabay.com/photo/2016/11/14/04/36/boy-1822614_960_720.jpg');
+    }
+}
+
+.footer{
+    position: absolute;
+    top: 600px;
+    
+}
+.social{
+    text-align: center;
+    width: 600%;
+    background-color:black;
+    color: white;
+    margin: 10px;
+}
+.social a{
+    font-size: 35px;
+    padding: 10px;
+    text-align: center;
+    color:white;
+}
+.social a:hover{
+    font-size: 35px;
+    padding: 10px;
+    color:grey;
+}
